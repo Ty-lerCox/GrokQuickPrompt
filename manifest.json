@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Grok Quick Prompt",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Provides quick prompt options with add/delete functionality on supported pages.",
     "permissions": [],
     "content_scripts": [
