@@ -62,9 +62,10 @@
     // Create a container for the UI elements.
     const container = document.createElement('div');
     container.style.position = 'fixed';
-    container.style.top = '80vh';
-    container.style.right = '40vw';
-    container.style.zIndex = '1000';
+    container.style.bottom = 'calc(100px + 2rem)'; // Adjust this value to sit above the input form (100px is approximate height of the form, plus some margin)
+    container.style.left = '50%'; // Center horizontally
+    container.style.transform = 'translateX(-50%)'; // Offset to truly center it
+    container.style.zIndex = '100'; // Higher than the form's z-index of 50
     container.style.padding = '10px';
     container.style.backgroundColor = '#000';
     container.style.border = 'none';
@@ -72,6 +73,8 @@
     container.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
     container.style.fontSize = '12px';
     container.style.color = '#fff';
+    container.style.width = 'auto'; // Ensure it adapts to content
+    container.style.maxWidth = '90vw'; // Prevent overflow on small screens
 
     // Create the dropdown element.
     const dropdown = document.createElement('select');
