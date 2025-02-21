@@ -63,7 +63,7 @@
     const container = document.createElement('div');
     container.style.position = 'fixed';
     container.style.bottom = 'calc(100px + 2rem)'; // Adjust this value to sit above the input form (100px is approximate height of the form, plus some margin)
-    container.style.left = '50%'; // Center horizontally
+    container.style.left = '55%'; // Center horizontally
     container.style.transform = 'translateX(-50%)'; // Offset to truly center it
     container.style.zIndex = '100'; // Higher than the form's z-index of 50
     container.style.padding = '10px';
