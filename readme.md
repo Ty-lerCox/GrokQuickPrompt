@@ -4,16 +4,15 @@
 
 ---
 
-<a href="https://i.imgur.com/ynM5Fs3.png">
+<a href="https://i.imgur.com/ynM5Fs3.png" target="_blank">
   <img src="https://i.imgur.com/ynM5Fs3.png" alt="Options" width="150" />
 </a>
-<a href="https://i.imgur.com/7q2MxDG.png">
-  <img src="https://i.imgur.com/ynM5Fs3.png" alt="Options" width="150" />
+<a href="https://i.imgur.com/7q2MxDG.png" target="_blank">
+  <img src="https://i.imgur.com/7q2MxDG.png" alt="Options" width="150" />
 </a>
-<a href="https://i.imgur.com/8KBF54y.png">
-  <img src="https://i.imgur.com/ynM5Fs3.png" alt="Options" width="150" />
+<a href="https://i.imgur.com/8KBF54y.png" target="_blank">
+  <img src="https://i.imgur.com/8KBF54y.png" alt="Options" width="150" />
 </a>
-
 
 ## Features
 
