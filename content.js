@@ -15,13 +15,6 @@
     } else {
         pasteOptions = [
             'Write next chapter with 1000 words',
-            'Outline the next 10 chapters for stage 2',
-            'Outline the next 10 chapters for stage 3',
-            'Outline the next 10 chapters for stage 4',
-            'Outline the next 10 chapters for stage 5',
-            'Outline the next 10 chapters for stage 6',
-            'Outline the next 10 chapters for stage 7',
-            'Outline the next 10 chapters for stage 8',
             'Write chapter 1 with 1000 words',
             'Write chapter 2 with 1000 words',
             'Write chapter 3 with 1000 words',
@@ -94,12 +87,19 @@
     defaultOption.style.fontSize = '12px';
     dropdown.appendChild(defaultOption);
 
-    // Function to populate dropdown with current pasteOptions.
+    // Function to populate dropdown with current pasteOptions sorted alphabetically.
     function populateDropdown() {
+        // Remove existing options except the default.
         dropdown
             .querySelectorAll('option:not(:first-child)')
             .forEach((el) => el.remove());
-        pasteOptions.forEach((optionText) => {
+
+        // Create a sorted copy of the pasteOptions array.
+        const sortedOptions = pasteOptions
+            .slice()
+            .sort((a, b) => a.localeCompare(b));
+
+        sortedOptions.forEach((optionText) => {
             const option = document.createElement('option');
             option.value = optionText;
             option.innerText = optionText;
@@ -213,7 +213,8 @@
     addOptionButton.addEventListener('click', () => {
         const newOption = newOptionInput.value.trim();
         if (newOption && !pasteOptions.includes(newOption)) {
-            pasteOptions.unshift(newOption);
+            pasteOptions.push(newOption);
+            // Save updated list and refresh dropdown.
             localStorage.setItem('pasteOptions', JSON.stringify(pasteOptions));
             populateDropdown();
             newOptionInput.value = '';
